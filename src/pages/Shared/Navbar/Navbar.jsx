@@ -20,14 +20,6 @@ const Navbar = () => {
 						Add
 					</Link>
 				</li>
-				<li>
-					<Link
-						className="btn"
-						to={"/updateCoffee"}
-					>
-						Update
-					</Link>
-				</li>
 			</ul>
 		</div>
 	);
