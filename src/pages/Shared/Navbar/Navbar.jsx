@@ -4,14 +4,29 @@ const Navbar = () => {
 	return (
 		<div>
 			<ul className="flex justify-center gap-2 my-4">
-				<li className="btn">
-					<Link to={"/"}>H</Link>
+				<li>
+					<Link
+						className="btn"
+						to={"/"}
+					>
+						H
+					</Link>
 				</li>
-				<li className="btn">
-					<Link to={"/addCoffee"}>Add</Link>
+				<li>
+					<Link
+						className="btn"
+						to={"/addCoffee"}
+					>
+						Add
+					</Link>
 				</li>
-				<li className="btn">
-					<Link to={"/updateCoffee"}>Update</Link>
+				<li>
+					<Link
+						className="btn"
+						to={"/updateCoffee"}
+					>
+						Update
+					</Link>
 				</li>
 			</ul>
 		</div>
