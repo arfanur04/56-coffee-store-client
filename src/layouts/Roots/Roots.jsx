@@ -4,9 +4,11 @@ import Navbar from "../../pages/Shared/Navbar/Navbar";
 const Roots = () => {
 	return (
 		<>
-			<div className="max-w-6xl mx-auto px-2">
+			<div className="max-w-6xl px-2 mx-auto">
 				<Navbar />
-				<h1 className="text-5xl text-purple-600 text-center">Coffee Store</h1>
+				<h1 className="mb-6 text-5xl text-center text-purple-600">
+					Coffee Store
+				</h1>
 				<Outlet />
 			</div>
 		</>

@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
 	return (
 		<div>
-			<ul className="flex gap-2 justify-center my-4">
+			<ul className="flex justify-center gap-2 my-4">
 				<li className="btn">
-					<Link to={"/"}>Home</Link>
+					<Link to={"/"}>H</Link>
 				</li>
 				<li className="btn">
-					<Link to={"/addCoffee"}>Add Coffee</Link>
+					<Link to={"/addCoffee"}>Add</Link>
 				</li>
 				<li className="btn">
-					<Link to={"/updateCoffee"}>Update Coffee</Link>
+					<Link to={"/updateCoffee"}>Update</Link>
 				</li>
 			</ul>
 		</div>
