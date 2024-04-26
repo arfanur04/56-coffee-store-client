@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { websiteTitle } from "../../hooks/useTitle/useTitle";
 import Swal from "sweetalert2";
+import { useLocalIP } from "../../hooks/useIPAddress/useIPAddress";
 
 const AddCoffee = () => {
 	const handleAddCoffee = (e) => {
@@ -26,7 +27,7 @@ const AddCoffee = () => {
 		console.log(`newCoffee:`, newCoffee);
 
 		// send data to the server
-		fetch(`http://localhost:5000/coffee`, {
+		fetch(`http://${useLocalIP}:5000/coffee`, {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",

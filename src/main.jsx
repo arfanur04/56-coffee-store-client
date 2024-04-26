@@ -10,6 +10,7 @@ import UpdateCoffee from "./pages/UpdateCoffee/UpdateCoffee.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { HelmetProvider } from "react-helmet-async";
+import { useLocalIP } from "./hooks/useIPAddress/useIPAddress.js";
 
 const router = createBrowserRouter([
 	{
@@ -20,17 +21,17 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <Home />,
-				loader: () => fetch(`http://localhost:5000/coffee`),
+				loader: () => fetch(`http://${useLocalIP}:5000/coffee`),
 			},
 			{
 				path: "/addCoffee",
-				element: <AddCoffee></AddCoffee>,
+				element: <AddCoffee />,
 			},
 			{
 				path: "/updateCoffee/:id",
-				element: <UpdateCoffee></UpdateCoffee>,
+				element: <UpdateCoffee />,
 				loader: ({ params }) =>
-					fetch(`http://localhost:5000/coffee/${params.id}`),
+					fetch(`http://${useLocalIP}:5000/coffee/${params.id}`),
 			},
 		],
 	},

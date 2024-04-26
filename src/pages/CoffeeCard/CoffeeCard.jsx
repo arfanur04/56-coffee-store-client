@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useLocalIP } from "../../hooks/useIPAddress/useIPAddress";
 
 const CoffeeCard = ({ coffee }) => {
 	const { _id, name, quantity, supplier, taste, photo } = coffee;
@@ -22,7 +23,7 @@ const CoffeeCard = ({ coffee }) => {
 				// 	icon: "success",
 				// });
 
-				fetch(`http://localhost:5000/coffee/${_id}`, {
+				fetch(`http://${useLocalIP}:5000/coffee/${_id}`, {
 					method: "DELETE",
 				})
 					.then((res) => res.json())
